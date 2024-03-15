@@ -9,7 +9,7 @@ datastore_client = datastore.Client()
 # Tipo de la entidad que se trabaja
 kind = "Heroe"
 
-def list(request):
+def get_list(request):
     """Definición de la función invocada por la Cloud Function. 
     Muestra la infromación de todos los héroes registrados en el sistema
     
