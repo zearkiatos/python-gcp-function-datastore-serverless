@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "1300c79b-cd7d-4f2d-b4d5-1f324b0a0003",
+		"name": "FuncionesYDatastore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "funcion-heroes-datastore-crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Alignment\": \"good\",\n    \"Eye color\": \"yellow\",\n    \"Gender\": \"Male\",\n    \"Hair color\": \"No Hair\",\n    \"Height\": 203,\n    \"Name\": \"A-Bomb\",\n    \"Publisher\": \"Marvel Comics\",\n    \"Race\": \"Human\",\n    \"Skin color\": \"-\",\n    \"Weight\": 441\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{region}}-{{id_proyect}}.cloudfunctions.net/funcion-heroes-datastore-crear",
+					"protocol": "https",
+					"host": [
+						"{{region}}-{{id_proyect}}",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion-heroes-datastore-crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "funcion-heroes-datastore-listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{region}}-{{id_proyect}}.cloudfunctions.net/funcion-heroes-datastore-listar",
+					"protocol": "https",
+					"host": [
+						"{{region}}-{{id_proyect}}",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion-heroes-datastore-listar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id_proyect",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "region",
+			"value": "us-central1",
+			"type": "default"
+		}
+	]
+}
